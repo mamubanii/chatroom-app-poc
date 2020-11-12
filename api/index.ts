@@ -5,12 +5,14 @@ import cookieParser from "cookie-parser";
 // Require API routes
 import test from "./routes/test";
 
+const DEFAULT_COOKIE_SECRET = "this-is-default-cookie-secret";
+
 // Create express instance
 const app: express.Application = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser(process.env.COOKIE_SECRET)); // for signed cookies
+app.use(cookieParser(process.env.COOKIE_SECRET || DEFAULT_COOKIE_SECRET)); // for signed cookies
 app.use(cookieParser()); // for unsigned cookies
 
 // Import API Routes
