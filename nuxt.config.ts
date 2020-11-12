@@ -56,12 +56,12 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
 
-  // Server configuration
-  server: {
-    port: config.serverPort, // default: 3000
-    host: config.serverHost, // default: localhost, set to 0.0.0.0 to deploy
-    timing: false,
-  },
+  // // Server configuration
+  // server: {
+  //   port: config.serverPort, // default: 3000
+  //   host: config.serverHost, // default: localhost, set to 0.0.0.0 to deploy
+  //   timing: false,
+  // },
 
   // Server API
   serverMiddleware: { "/api": "~/api" },
